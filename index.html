@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090714">
+<meta name="description" content="MiyabiPlay — top up game dengan tampilan modern.">
+<title>MiyabiPlay — Top Up Game</title>
+<style>
+:root{--bg:#080713;--panel:#100d20;--panel2:#17112b;--line:#30204e;--text:#f7f3ff;--muted:#aaa0c4;--pink:#f02bd8;--violet:#8b35ff;--cyan:#42e9ff;--good:#43e6a0;--shadow:0 12px 38px #0007}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#29104a 0,transparent 36%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 20px}.topbar{position:sticky;top:0;z-index:10;background:#080713eF;border-bottom:1px solid #35204b;backdrop-filter:blur(14px)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:25px;font-weight:900;letter-spacing:-1px}.brand span{color:var(--pink)}.tag{font-size:10px;color:var(--muted);letter-spacing:2px}.navlinks{display:flex;gap:20px}.navlinks a{color:#d5cbe8;text-decoration:none;font-size:13px}.navlinks a:hover{color:var(--cyan)}.pill{border:1px solid #5d2e8c;background:#1c1232;border-radius:999px;padding:9px 15px;color:#fff}.hero{padding:54px 0 32px;display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:2px;font-size:11px}.hero h1{font-size:clamp(36px,6vw,64px);line-height:1.03;margin:12px 0}.gradient{background:linear-gradient(90deg,#fff,#f02bd8 55%,#8b70ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:560px}.hero-art{min-height:240px;border:1px solid #542c7e;border-radius:26px;background:radial-gradient(circle at 50% 45%,#5b1c91 0,#21113b 34%,#0d0a19 72%);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 0 45px #ad26ff22}.orb{width:155px;height:155px;border-radius:50%;display:grid;place-items:center;font-size:72px;background:linear-gradient(145deg,#ff43df,#6b29ff);box-shadow:0 0 65px #c52dff66}.art-caption{position:absolute;bottom:17px;font-weight:800;letter-spacing:3px;color:#f7c5ff}.stats{display:flex;gap:18px;flex-wrap:wrap;color:#c8bddc;font-size:12px;margin-top:24px}.stats b{color:white}.section{padding:26px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:18px}.section h2{margin:0;font-size:24px}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.search{width:min(320px,100%);background:#100d20;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:white;outline:none}.search:focus,input:focus,select:focus{border-color:var(--pink)!important;box-shadow:0 0 0 3px #f02bd822}.games{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.game{border:1px solid var(--line);border-radius:17px;background:linear-gradient(160deg,#17112b,#0c0a17);padding:17px;text-align:left;color:white;transition:.2s;min-height:142px}.game:hover,.game.active{transform:translateY(-2px);border-color:var(--pink);box-shadow:0 0 22px #d020ff1b}.game-icon{width:47px;height:47px;border-radius:14px;background:linear-gradient(140deg,#6228a5,#ed2bc9);display:grid;place-items:center;font-size:23px;margin-bottom:12px}.game strong{display:block;font-size:14px}.game small{color:var(--muted)}.shop-layout{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}.panel{border:1px solid var(--line);background:linear-gradient(155deg,#151027,#0d0a18);border-radius:19px;padding:20px;box-shadow:var(--shadow)}.panel h3{margin:0 0 5px}.sub{color:var(--muted);font-size:12px;margin:0 0 18px}.nominals{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.nominal{padding:14px 11px;border:1px solid #33224c;background:#100d20;border-radius:13px;color:white;text-align:left}.nominal strong{display:block;font-size:13px}.nominal span{color:var(--muted);font-size:11px}.nominal b{display:block;color:#ff78eb;margin-top:8px}.nominal.active{border-color:var(--pink);background:#29113b;box-shadow:inset 0 0 0 1px #f02bd855}.field{display:grid;gap:6px;margin:13px 0}.field label{font-size:12px;color:#c9bfdb}.field input,.field select{width:100%;border:1px solid #38264f;background:#090714;color:white;border-radius:10px;padding:12px;outline:none}.btn{border:0;border-radius:11px;padding:13px 16px;font-weight:800;color:white;background:linear-gradient(100deg,#8b35ff,#ed25d4);box-shadow:0 7px 22px #c51bea2c}.btn:disabled{opacity:.55;cursor:not-allowed}.btn.full{width:100%}.notice{font-size:11px;color:var(--muted);margin-top:12px}.summary{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #2b1d40;font-size:13px}.summary.total{font-weight:900;font-size:17px;border:0}.status{padding:12px;border-radius:10px;margin-top:12px;font-size:12px;display:none;white-space:pre-wrap}.status.show{display:block}.status.ok{background:#103326;color:#9af5cc}.status.err{background:#3a142b;color:#ffb2d8}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.feature{border:1px solid var(--line);border-radius:15px;padding:17px;background:#100d20}.feature b{display:block;margin:7px 0}.feature p{margin:0;color:var(--muted);font-size:12px}.footer{border-top:1px solid var(--line);margin-top:40px;padding:25px 0;color:var(--muted);font-size:12px}.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.mobile-note{display:none}
+@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:36px}.hero-art{min-height:180px}.orb{width:115px;height:115px;font-size:55px}.games{grid-template-columns:repeat(2,1fr)}.shop-layout{grid-template-columns:1fr}.nominals{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.search{width:100%}.mobile-note{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+  <a href="#" style="color:inherit;text-decoration:none"><div class="brand">MIYABI<span>Play</span></div><div class="tag">TOP UP GAME • CEPAT • PRAKTIS</div></a>
+  <nav class="navlinks"><a href="#home">Home</a><a href="#games">Game</a><a href="#topup">Top Up</a><a href="#cara">Cara Order</a></nav>
+  <a class="pill" href="#topup" style="text-decoration:none">Mulai Top Up ↗</a>
+</div></header>
+<main>
+<section class="wrap hero" id="home">
+  <div><div class="eyebrow">✦ YOUR GAME, YOUR POWER</div><h1>Top Up Game<br><span class="gradient">Naik Level.</span></h1>
+    <p>Pilih game favorit, tentukan nominal, lalu kirim pesanan. MiyabiPlay adalah template toko top up yang bisa kamu sesuaikan sendiri.</p>
+    <a class="btn" href="#games" style="display:inline-block;text-decoration:none">Jelajahi Game →</a>
+    <div class="stats"><span>✦ <b>8 game</b> populer</span><span>◈ <b>Desain</b> neon premium</span><span>⌁ <b>Mobile</b> friendly</span></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustrasi gaming"><div class="orb">✦</div><div class="art-caption">PLAY • LEVEL • REPEAT</div></div>
+</section>
+<section class="wrap section" id="games">
+  <div class="section-head"><div><h2>🔥 Game Populer</h2><p>Pilih game untuk melihat pilihan top up.</p></div><input class="search" id="search" placeholder="Cari game favorit..." aria-label="Cari game"></div>
+  <div class="games" id="gameGrid"></div>
+</section>
+<section class="wrap section" id="topup">
+  <div class="section-head"><div><h2>⚡ Buat Pesanan</h2><p>Isi ID akun dengan benar sebelum melanjutkan.</p></div></div>
+  <div class="shop-layout">
+    <div class="panel"><h3 id="selectedGameTitle">Mobile Legends</h3><p class="sub">Pilih nominal yang kamu inginkan.</p><div class="nominals" id="nominals"></div>
+      <div class="notice">Harga di bawah adalah contoh/dummy. Ubah sesuai harga supplier milikmu sebelum membuka toko.</div>
+    </div>
+    <aside class="panel"><h3>Detail Pesanan</h3><p class="sub">Periksa kembali sebelum mengirim.</p>
+      <div class="summary"><span>Game</span><b id="sumGame">Mobile Legends</b></div>
+      <div class="summary"><span>Nominal</span><b id="sumNominal">86 Diamonds</b></div>
+      <div class="summary total"><span>Total</span><b id="sumPrice">Rp15.000</b></div>
+      <form id="orderForm">
+        <div class="field"><label for="userId">User ID / Player ID</label><input id="userId" required maxlength="80" placeholder="Masukkan ID game"></div>
+        <div class="field"><label for="zoneId">Zone ID (jika diperlukan)</label><input id="zoneId" maxlength="40" placeholder="Contoh: 1234 (opsional)"></div>
+        <div class="field"><label for="contact">Kontak untuk status pesanan</label><input id="contact" required maxlength="100" placeholder="WhatsApp atau email"></div>
+        <div class="field"><label for="payment">Metode pembayaran</label><select id="payment"><option value="manual">Konfirmasi manual</option><option value="qris">QRIS (perlu payment gateway)</option><option value="ewallet">E-wallet (perlu payment gateway)</option></select></div>
+        <button class="btn full" id="submitBtn" type="submit">Buat Pesanan ↗</button>
+        <div class="status" id="statusBox" role="status"></div>
+      </form>
+      <p class="notice">Demo belum memproses pembayaran atau mengirim item game secara otomatis. Integrasikan backend supplier dan payment gateway resmi sebelum digunakan untuk transaksi nyata.</p>
+    </aside>
+  </div>
+</section>
+<section class="wrap section" id="cara"><div class="section-head"><div><h2>Kenapa MiyabiPlay?</h2><p>Template sederhana untuk memulai toko game online.</p></div></div>
+<div class="features">
+  <div class="feature"><div style="font-size:24px">⚡</div><b>Alur pemesanan ringkas</b><p>Pilih game, nominal, lalu isi ID pemain dan kontak.</p></div>
+  <div class="feature"><div style="font-size:24px">🔒</div><b>Siap dihubungkan ke backend</b><p>API key supplier tidak ditaruh di browser. Gunakan fungsi server-side.</p></div>
+  <div class="feature"><div style="font-size:24px">📱</div><b>Nyaman di HP</b><p>Tampilan responsif untuk layar kecil maupun desktop.</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap"><span><b style="color:white">MIYABI<span style="color:var(--pink)">Play</span></b> © <span id="year"></span> — Template top up game.</span><span>Gunakan API supplier dan pembayaran resmi. Jangan bagikan API key.</span></div></footer>
+<script>
+/*
+ * MIYABIPLAY FRONTEND
+ * Harga dan nominal di bawah adalah data contoh.
+ * Jangan pernah menaruh API_KEY supplier di file ini.
+ * Atur endpoint backend di BACKEND_ENDPOINT setelah deploy fungsi server.
+ */
+const BACKEND_ENDPOINT = ""; // contoh: https://PROJECT.supabase.co/functions/v1/create-topup
+const games = [
+ {id:"ml",name:"Mobile Legends",short:"MLBB",icon:"💎",items:[["86 Diamonds",15000],["172 Diamonds",29000],["257 Diamonds",42000],["344 Diamonds",56000],["429 Diamonds",70000],["514 Diamonds",84000]]},
+ {id:"ff",name:"Free Fire",short:"Free Fire",icon:"🔥",items:[["70 Diamonds",10000],["140 Diamonds",19000],["355 Diamonds",47000],["720 Diamonds",93000]]},
+ {id:"pubgm",name:"PUBG Mobile",short:"PUBG",icon:"🎯",items:[["60 UC",16000],["325 UC",79000],["660 UC",155000],["1800 UC",390000]]},
+ {id:"genshin",name:"Genshin Impact",short:"Genshin",icon:"✨",items:[["60 Genesis Crystals",16000],["300 + 30 Crystals",79000],["980 + 110 Crystals",249000]]},
+ {id:"hsr",name:"Honkai: Star Rail",short:"HSR",icon:"🌌",items:[["60 Oneiric Shards",16000],["Express Supply Pass",79000],["980 Shards",249000]]},
+ {id:"roblox",name:"Roblox",short:"Roblox",icon:"🧱",items:[["80 Robux",16000],["400 Robux",79000],["800 Robux",159000]]},
+ {id:"valorant",name:"Valorant",short:"VALORANT",icon:"🎮",items:[["125 VP",15000],["420 VP",50000],["700 VP",80000],["1375 VP",150000]]},
+ {id:"codm",name:"Call of Duty Mobile",short:"CODM",icon:"🪖",items:[["80 CP",16000],["420 CP",79000],["880 CP",159000]]}
+];
+let selectedGame=games[0], selectedItem=selectedGame.items[0];
+const rupiah=n=>new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function renderGames(filter=""){
+ const grid=document.getElementById("gameGrid");
+ const shown=games.filter(g=>g.name.toLowerCase().includes(filter.toLowerCase()));
+ grid.innerHTML=shown.map(g=>`<button class="game ${g.id===selectedGame.id?"active":""}" data-game="${g.id}"><div class="game-icon">${g.icon}</div><strong>${g.name}</strong><small>${g.short} · Top up</small></button>`).join("");
+ grid.querySelectorAll("[data-game]").forEach(b=>b.addEventListener("click",()=>chooseGame(b.dataset.game)));
+}
+function chooseGame(id){selectedGame=games.find(g=>g.id===id)||games[0];selectedItem=selectedGame.items[0];renderGames(document.getElementById("search").value);renderNominals();updateSummary();document.getElementById("selectedGameTitle").textContent=selectedGame.name;document.getElementById("topup").scrollIntoView({behavior:"smooth",block:"start"});}
+function renderNominals(){const n=document.getElementById("nominals");n.innerHTML=selectedGame.items.map((it,i)=>`<button type="button" class="nominal ${it===selectedItem?"active":""}" data-item="${i}"><strong>${esc(it[0])}</strong><span>${selectedGame.short}</span><b>${rupiah(it[1])}</b></button>`).join("");n.querySelectorAll("[data-item]").forEach(b=>b.addEventListener("click",()=>{selectedItem=selectedGame.items[Number(b.dataset.item)];renderNominals();updateSummary();}));}
+function updateSummary(){document.getElementById("sumGame").textContent=selectedGame.name;document.getElementById("sumNominal").textContent=selectedItem[0];document.getElementById("sumPrice").textContent=rupiah(selectedItem[1]);}
+function showStatus(message,type){const b=document.getElementById("statusBox");b.textContent=message;b.className="status show "+type;}
+document.getElementById("search").addEventListener("input",e=>renderGames(e.target.value));
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("orderForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+ const order={game:selectedGame.id,game_name:selectedGame.name,product:selectedItem[0],display_price:selectedItem[1],user_id:document.getElementById("userId").value.trim(),zone_id:document.getElementById("zoneId").value.trim(),contact:document.getElementById("contact").value.trim(),payment_method:document.getElementById("payment").value};
+ if(!order.user_id||!order.contact){showStatus("Lengkapi User ID dan kontak terlebih dahulu.","err");return;}
+ if(!BACKEND_ENDPOINT){showStatus("Mode demo: pesanan belum dikirim. Untuk mengaktifkan transaksi, deploy backend Supabase Edge Function lalu isi BACKEND_ENDPOINT di file index.html. API key supplier harus disimpan sebagai server secret, bukan di HTML.","err");return;}
+ const btn=document.getElementById("submitBtn");btn.disabled=true;btn.textContent="Mengirim...";
+ try{
+  const response=await fetch(BACKEND_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(order)});
+  const result=await response.json().catch(()=>({}));
+  if(!response.ok)throw new Error(result.error||"Permintaan gagal. Coba lagi.");
+  showStatus("Pesanan diterima oleh backend. Nomor pesanan: "+(result.order_id||"menunggu konfirmasi")+". Ikuti instruksi pembayaran resmi.","ok");
+ }catch(err){showStatus("Pesanan belum berhasil dikirim: "+err.message,"err");}
+ finally{btn.disabled=false;btn.textContent="Buat Pesanan ↗";}
+});
+renderGames();renderNominals();updateSummary();
+</script>
+</body>
+</html>
